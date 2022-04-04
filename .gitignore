@@ -1,0 +1,5 @@
+*.log
+/json files
+/.settings
+/target
+/.project

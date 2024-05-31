@@ -1,7 +1,5 @@
 package com.nandha.wiki.wikiminer.entities;
 
-import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -17,31 +15,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  **/
 
 public class WikiData {
+	
+	Map<String, PageData> entities;
+	
 
-	Map<String, PageData> entities = new HashMap<>();
+
+	/**
+	 * @return the entities
+	 */
+	public Map<String, PageData> getEntities() {
+		return entities;
+	}
+
+
+
+	/**
+	 * @param entities the entities to set
+	 */
+	public void setEntities(Map<String, PageData> entities) {
+		this.entities = entities;
+	}
+
+
 
 	@Override
 	public String toString() {
 		return "WikiData [entities=" + entities + "]";
 	}
-
+	
+	
 }
 
-class Labels {
-
-	String language;
-	String value;
-
-	@Override
-	public String toString() {
-		return "Labels [language=" + language + ", value=" + value + "]";
-	}
-
-}
-
-class Datavalue{
-	long value;
+class ClaimObj {
+	String id;
 	String type;
+	String rank;
+	Mainsnak mainsnak;
 }
 
 class Mainsnak {
@@ -52,47 +61,21 @@ class Mainsnak {
 	Datavalue datavalue;
 }
 
-class ClaimObj {
-	String id;
-	String type;
-	String rank;
-	Mainsnak mainsnak;
-	References[] references;
-}
-
 class References {
 	String hash;
 	Map<String, Mainsnak> snaks;
 	@JsonProperty("snaks-order")
 	String[] snaksOrder;
-	
+
+}
+
+class Datavalue {
+	long value;
+	String type;
 }
 
 class Sitelinks {
 	String site;
 	String title;
 	String[] badges;
-}
-
-class PageData {
-	int pageid;
-	boolean ns;
-	String title;
-	long lastrevid;
-	Date modified;
-	String type;
-	String id;
-	Map<String, Labels> labels;
-	Map<String, Labels> descriptions;
-	Map<String, Labels[]> aliases;
-	Map<String, ClaimObj[]> claims;
-	Map<String, Sitelinks> sitelinks;
-
-	@Override
-	public String toString() {
-		return "PageData [pageid=" + pageid + ", ns=" + ns + ", title=" + title + ", lastrevid=" + lastrevid
-				+ ", modified=" + modified + ", type=" + type + ", id=" + id + ", labels=" + labels + ", descriptions="
-				+ descriptions + ", aliases=" + aliases + ", claims=" + claims + ", sitelinks=" + sitelinks + "]";
-	}
-
 }

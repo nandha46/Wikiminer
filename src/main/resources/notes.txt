@@ -1,0 +1,40 @@
+Brad pitt family tree
+Queen eliabeth tree
+
+
+WikiData property
+    image - p18
+    gender - p21
+    country of citizenship - p27
+    given name - p735
+    family name - p734
+    dob- p569
+    place of birth - p19
+    place of death - p20
+    father - p22
+    mother - p25
+    spouse - p26
+        start time - p580
+        end time - p582
+    partner unmarried - p451
+    child - p40
+    sibling - 3373
+    sexual orient - p91
+    native language - p103
+    languages - p1412
+    occupation - p106
+    educated - p69
+    work period - p2031
+    religion - p140
+    filmography - p1283
+    followers - p8687
+    insta username - p2003
+    height - p2048
+    weight - p2067
+    eye color - p1340
+    hair color - p1884
+
+    ethnicity - p172
+    
+
+    

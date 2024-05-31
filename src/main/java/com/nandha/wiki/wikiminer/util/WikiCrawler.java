@@ -23,7 +23,7 @@ import okhttp3.Response;
 public class WikiCrawler {
 	
 	private static final OkHttpClient client = new OkHttpClient();
-	private static final Logger LOGGER = LoggerFactory.getLogger(JsonWriter.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(WikiCrawler.class);
 	
 	public static String run(String url) throws IOException {
 		LOGGER.info("sending http request....");
